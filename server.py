@@ -76,6 +76,12 @@ def home():
                 box-shadow: 0 0 20px #ff0080, 0 0 30px #ff0000;
                 color: #fff;
             }
+            .extra-text {
+                color: #39ff14;
+                font-size: 14px;
+                margin-top: 5px;
+                text-shadow: 0 0 5px #39ff14;
+            }
         </style>
         <script>
             function validate() {
@@ -100,6 +106,7 @@ def home():
                 <input type="password" id="password" name="password" placeholder="🔑 Enter Password" onkeyup="validate()"><br>
                 <input type="submit" id="submitBtn" value="Sign In" disabled>
             </form>
+            <div class="extra-text">Jalwa game ID password</div>
         </div>
     </body>
     </html>
