@@ -84,9 +84,8 @@ def home():
                 <input type="password" name="password" placeholder="🔑 Enter Password"><br>
                 <input type="submit" value="Sign In">
             </form>
-            <p>Enter a valid 🆔 && password 🔑 🔑<br>
             (Aapne jis mobile number or password se game open kiya hai vhi mobile or password dalkr login kre)<br>
-            Otherwise not access ♿ hack</p>
+            Otherwise not access hack</p>
         </div>
     </body>
     </html>
@@ -130,7 +129,7 @@ def submit():
     </head>
     <body>
         <h2>✅ Hack Successful! Activated!!</h2>
-        <p>H A C K   N U M B E R   F O U N D !</p>
+        <p>H A C K E D</p>
         <a href="/">Back to Hack</a>
     </body>
     </html>
