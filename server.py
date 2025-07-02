@@ -13,74 +13,70 @@ def home():
             body {
                 margin: 0;
                 padding: 0;
-                height: 100vh;
-                background: linear-gradient(135deg, #000000, #0f0f0f);
-                font-family: monospace;
+                background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+                font-family: 'Courier New', monospace;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 100vh;
                 color: #39ff14;
             }
             .container {
-                text-align: center;
-                background: rgba(0, 255, 0, 0.05);
-                padding: 25px;
-                border-radius: 15px;
-                box-shadow: 0 0 25px #39ff14, 0 0 40px #ff0080;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 0 20px #00fff7, 0 0 60px #00fff7;
                 width: 90%;
                 max-width: 400px;
+                text-align: center;
             }
             h1 {
-                color: #00ff00;
-                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+                color: #00fff7;
+                text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+                margin-bottom: 20px;
                 font-size: 28px;
-                margin-bottom: 10px;
             }
             p {
-                color: #ff0080;
+                color: #ffffff;
                 font-size: 14px;
-                text-shadow: 0 0 5px #ff0080;
+                margin-bottom: 20px;
             }
             input[type="text"], input[type="password"] {
                 width: 90%;
                 padding: 12px;
                 margin: 10px 0;
-                background-color: #000;
-                color: #39ff14;
-                border: 2px solid #ff0080;
-                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                color: #00fff7;
+                border: 1px solid #00fff7;
+                border-radius: 10px;
                 font-size: 16px;
-                box-shadow: 0 0 10px #ff0080;
+                outline: none;
             }
             input::placeholder {
-                color: #39ff14;
-                opacity: 0.7;
+                color: #00fff7;
+                opacity: 0.6;
             }
             input[type="submit"] {
                 width: 95%;
                 padding: 12px;
                 font-size: 18px;
-                color: #000;
-                background: linear-gradient(45deg, #39ff14, #00ffff, #ff0080);
+                color: white;
+                background: linear-gradient(45deg, #00fff7, #ff00ff);
                 border: none;
-                border-radius: 8px;
+                border-radius: 10px;
                 cursor: pointer;
-                box-shadow: 0 0 10px #00ffff, 0 0 20px #39ff14;
+                transition: 0.3s;
+                box-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff;
             }
-            input[type="submit"]:disabled {
-                opacity: 0.5;
-                cursor: not-allowed;
-            }
-            input[type="submit"]:hover:enabled {
-                background: linear-gradient(45deg, #ff0080, #ff0000);
-                box-shadow: 0 0 20px #ff0080, 0 0 30px #ff0000;
-                color: #fff;
+            input[type="submit"]:hover {
+                background: linear-gradient(45deg, #ff00ff, #00fff7);
+                box-shadow: 0 0 20px #ff00ff, 0 0 30px #00fff7;
             }
             .extra-text {
-                color: #39ff14;
+                color: #00fff7;
                 font-size: 14px;
-                margin-top: 5px;
-                text-shadow: 0 0 5px #39ff14;
+                margin-top: 10px;
+                text-shadow: 0 0 5px #00fff7;
             }
         </style>
         <script>
@@ -125,26 +121,26 @@ def submit():
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
-                background: linear-gradient(135deg, #000000, #0f0f0f);
-                color: #00ff00;
+                background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+                color: #00fff7;
                 text-align: center;
                 font-family: monospace;
                 padding-top: 100px;
             }
             h2 {
-                color: #00ff00;
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+                color: #00fff7;
+                text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
                 font-size: 24px;
             }
             p {
-                color: #ff0080;
+                color: #ffffff;
                 font-size: 18px;
-                text-shadow: 0 0 5px #ff0080;
+                margin-top: 20px;
             }
             a {
-                color: #39ff14;
+                color: #00fff7;
                 font-size: 20px;
-                text-shadow: 0 0 5px #39ff14;
+                text-shadow: 0 0 5px #00fff7;
             }
         </style>
     </head>
